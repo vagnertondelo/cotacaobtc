@@ -1,7 +1,7 @@
 # cotacao_btc
 
 A new Flutter project.
-App flutter utilizando GETx, consultando API de contação de BTC em varias moedas mundiais 
+App flutter utilizando GETx, para estudar seu funcionamento e implementação, consultando API da blockchain contação de BTC em varias moedas mundiais 
 
 ## Getting Started
 
