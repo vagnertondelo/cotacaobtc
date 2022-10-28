@@ -1,16 +1,19 @@
-import 'package:cotacao_btc/app/controllers/home_contoller.dart';
+
 import 'package:cotacao_btc/app/controllers/theme_controller.dart';
 import 'package:cotacao_btc/app/screens/list_currencies_screens.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'app/controllers/list_currencies_contoller.dart';
+import 'app/screens/login_screen.dart';
+import 'controllerBinding.dart';
 
 void main() {
 
-  Get.lazyPut<HomeController>(() => HomeController());
-  Get.lazyPut<ListCurrenciesController>(() => ListCurrenciesController());
-  Get.lazyPut<ThemeController>(() => ThemeController());
+  ControllerBinding().dependencies();
+
+  // Get.lazyPut<HomeController>(() => HomeController());
+  // Get.lazyPut<ListCurrenciesController>(() => ListCurrenciesController());
+  // Get.lazyPut<ThemeController>(() => ThemeController());
+
   runApp(const MyApp());
 }
 
@@ -23,7 +26,7 @@ class MyApp extends StatelessWidget {
     ThemeController.to.loadThemeMode();
     return GetMaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         brightness: Brightness.light,
       ),
@@ -45,6 +48,7 @@ class MyApp extends StatelessWidget {
       //   primarySwatch: Colors.blue,
       // ),
       home: ListCurrencies(),
+      // home: LoginScreen(),
     );
   }
 }

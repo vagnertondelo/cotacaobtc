@@ -8,6 +8,8 @@ import '../components/editTheme_component.dart';
 import '../components/pais_cotacao.dart';
 
 class ListCurrencies extends StatefulWidget {
+  const ListCurrencies({Key? key}) : super(key: key);
+
   @override
   _ListCurrenciesState createState() => _ListCurrenciesState();
 }
@@ -72,7 +74,7 @@ class _ListCurrenciesState extends State<ListCurrencies> {
           ),
         ),
         body: Obx(() => controller.isLoading.value
-            ? Center(child: const CircularProgressIndicator())
+            ? const Center(child: CircularProgressIndicator())
             : Container(
                 child: ListView.builder(
                     padding: const EdgeInsets.all(8),
@@ -89,11 +91,11 @@ class _ListCurrenciesState extends State<ListCurrencies> {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child:
+                                //virou componente
                                PaisCotacao(image: 'assets/imagens-moedas/${controller.listCurrenciesObs[index].symbol}.png',width: 50.0,
 
                               )
-
-
+                              //era assim
                             // Image.asset('assets/imagens-moedas/${controller.listCurrenciesObs[index].symbol}.png', height: 50.0,width: 50.0,)
                             ),
                           // Text(controller.listCurrenciesObs[index].symbol),

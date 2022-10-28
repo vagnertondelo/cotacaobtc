@@ -1,6 +1,6 @@
 
 import 'package:cotacao_btc/app/models/cotacao_model.dart';
-import 'package:cotacao_btc/app/models/lis_currencies_model.dart';
+
 import 'package:cotacao_btc/app/services/cotacao_service.dart';
 import 'package:get/get.dart';
 
